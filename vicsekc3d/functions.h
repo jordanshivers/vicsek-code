@@ -297,7 +297,7 @@ void simulation_3D(double dt, double T, double rc, int N, double L, double v, do
 
         for (int tnum = 0; tnum < ceil(t_equil/dt); tnum++) {
 
-            if (tnum%1000 == 0) {
+            if (tnum%10 == 0) {
                 cout << "equilibrating... " << tnum*1.0/ceil(t_equil/dt)*100.0 << "%" << endl;
             }
 
@@ -505,7 +505,7 @@ void simulation_3D(double dt, double T, double rc, int N, double L, double v, do
         t = tnum*dt;
 
 
-        if (tnum%1000 == 0) {
+        if (tnum%10 == 0) {
             cout << "simulating... " << tnum*1.0/n_timesteps*100.0 << "%" << endl;
         }
 

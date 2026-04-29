@@ -47,7 +47,7 @@ std::string out_dir;
 
 int main(int argc, char* argv[]) {
 
-    omp_set_num_threads(NUMTHREADS);
+    // omp_set_num_threads(NUMTHREADS);
 
     int N, seed, n_T_steps, Tnum;
     double rho, L, dt, v, tmax, t_equil, rc, J, minT, maxT;
@@ -55,7 +55,7 @@ int main(int argc, char* argv[]) {
     // // // Parameters
     string dir = "./out";
     seed = 1;
-    N =  2000; //number of birds
+    N =  200; //number of birds
     rho = 1; // number density of birds
     dt = 0.1; // time step
     v = 1; // magnitude of bird velocity
@@ -85,7 +85,7 @@ int main(int argc, char* argv[]) {
     // maxT = atof(argv[14]);
 
     bool print_time_series = false;
-    print_birds = false;
+    print_birds = true;
     print_state = true;
 
     L = pow(N/rho,1.0/3.0); // box side length
